@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Event</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 450px;
+            width: 90%;
+            padding: 40px;
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #333;
+        }
+
+        .container input[type="text"],
+        .container input[type="date"],
+        .container input[type="time"],
+        .container input[type="email"],
+        .container input[type="tel"],
+        .container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom:26px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        .book {
+            background: linear-gradient(to bottom, #007bff, #0056b3);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+
+          
+        }
+
+        .container input[type="submit"]:hover {
+            background: linear-gradient(to bottom, #0056b3, #007bff);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book Event</h2>
+        <form action="book_event.php" method="post">
+            <label for="user_name">Your Name</label>
+            <input type="text" id="user_name" name="user_name" required>
+
+            <label for="user_email">Your Email</label>
+            <input type="email" id="user_email" name="user_email" required>
+
+            <label for="user_phone">Your Phone Number</label>
+            <input type="tel" id="user_phone" name="user_phone" required>
+
+            <label for="event_name">Event Name</label>
+            <input type="text" id="event_name" name="event_name" required>
+            
+            <label for="event_date">Event Date</label>
+            <input type="date" id="event_date" name="event_date" required>
+
+            <a href="paymengateway.html" class="book">Book Now</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .container input[type="text"],
+        .container input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        .container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>UPI Payment Gateway</h2>
+        <form action="process_upi_payment.php" method="post">
+            <label for="upi_id">UPI ID</label>
+            <input type="text" id="upi_id" name="upi_id" placeholder="example@upi" required>
+
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" name="amount" placeholder="Amount in INR" required>
+
+            <input type="submit" value="Make Payment">
+        </form>
+    </div>
+</body>
+</html>
